@@ -46,14 +46,14 @@ const orderSchema = new mongoose.Schema({
                 required: true
             },
             product:{
-                type: mongoose.Schema.objectId,
+                type: mongoose.Schema.ObjectId,
                 ref: "Product",
                 required: true
             },
         },
     ],
     user:{
-        type: mongoose.Schema.objectId,
+        type: mongoose.Schema.ObjectId,
         ref: "User",
         required: true,
     },
@@ -92,7 +92,7 @@ const orderSchema = new mongoose.Schema({
         default: 0
     },
     orderStatus: {
-        type: Number,
+        type: String,
         required: true,
         default: "Processing"
     },
